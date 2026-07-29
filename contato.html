@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato e Agendamento | Le Manine Pediatria Integrada</title>
+<meta name="description" content="Agende uma consulta na Le Manine. Endereço em Santana, São Paulo, horários de atendimento e canais de contato.">
+<link rel="icon" href="assets/img/logo-mark-green.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark-brown.png" alt="Símbolo Le Manine">
+      <span>
+        <span class="brand-name">le manine</span>
+        <span class="brand-tag">Pediatria integrada</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="jornada.html">Como cuidamos</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="#agendar" class="btn btn-primary">Agendar consulta</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Fale com a gente</p>
+      <h1>Vamos cuidar da sua família por inteiro</h1>
+      <p>Preencha o formulário abaixo ou fale direto pelo WhatsApp. Retornamos com carinho e agilidade.</p>
+    </div>
+  </section>
+
+  <section id="agendar">
+    <div class="container split">
+
+      <div class="reveal">
+        <p class="eyebrow">Agendamento</p>
+        <h2>Solicite sua consulta</h2>
+        <p class="lead">Conte um pouco sobre a sua família. Em breve alguém da equipe Le Manine entra em contato para confirmar o melhor horário.</p>
+
+        <form id="form-agendamento" class="flow" style="margin-top: var(--sp-6);" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="nome">Nome do responsável</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+              <span class="field-error">Por favor, informe seu nome.</span>
+            </div>
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" data-mask="phone" required>
+              <span class="field-error">Por favor, informe um telefone.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+              <span class="field-error">Informe um e-mail válido.</span>
+            </div>
+            <div class="field">
+              <label for="especialidade">Especialidade desejada</label>
+              <select id="especialidade" name="especialidade" required>
+                <option value="">Selecione</option>
+                <option value="pediatria">Pediatria</option>
+                <option value="odontopediatria">Odontopediatria</option>
+                <option value="ambas">Pediatria e odontopediatria</option>
+              </select>
+              <span class="field-error">Selecione uma especialidade.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="crianca">Nome da criança</label>
+              <input type="text" id="crianca" name="crianca" placeholder="Nome da criança">
+            </div>
+            <div class="field">
+              <label for="idade">Idade da criança</label>
+              <input type="text" id="idade" name="idade" placeholder="Ex.: 2 anos e 4 meses">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o que você procura"></textarea>
+          </div>
+
+          <p class="form-note">Ao enviar, você concorda em ser contatado pela equipe Le Manine para confirmar o agendamento. Dados fictícios de demonstração.</p>
+
+          <button type="submit" class="btn btn-primary btn-block">Enviar solicitação de agendamento</button>
+        </form>
+
+        <div id="form-sucesso" class="form-success">
+          <span>&#10003;</span>
+          <span>Solicitação enviada! Em breve nossa equipe entra em contato para confirmar sua consulta.</span>
+        </div>
+      </div>
+
+      <div class="reveal flow">
+        <div class="card">
+          <p class="eyebrow">Endereço</p>
+          <dl class="address-grid">
+            <div><dt>CEP</dt><dd data-mask-display="cep">02010-200</dd></div>
+            <div><dt>Logradouro</dt><dd>Rua Voluntários da Pátria</dd></div>
+            <div><dt>Número</dt><dd>2201</dd></div>
+            <div><dt>Bairro</dt><dd>Santana</dd></div>
+            <div><dt>Cidade</dt><dd>São Paulo</dd></div>
+            <div><dt>UF</dt><dd>SP</dd></div>
+          </dl>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Horário de atendimento</p>
+          <p style="display:flex; justify-content:space-between; max-width:320px;"><span>Segunda a sexta</span><strong>8h às 18h</strong></p>
+          <p style="display:flex; justify-content:space-between; max-width:320px;"><span>Sábado</span><strong>8h às 12h</strong></p>
+          <p style="display:flex; justify-content:space-between; max-width:320px;"><span>Domingo</span><strong>Fechado</strong></p>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">Outros canais</p>
+          <div class="tag-list">
+            <a class="chip" href="https://wa.me/5511940028899" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="chip chip-soft" href="tel:+551140028899">Telefone</a>
+            <a class="chip" href="mailto:ola@lemanine.com.br">E-mail</a>
+            <a class="chip chip-soft" href="#" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden;">
+          <iframe title="Mapa da região da Le Manine em Santana, São Paulo" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.635%2C-23.505%2C-46.605%2C-23.485&layer=mapnik" style="width:100%; height:260px; border:0; background:var(--color-bg-alt);" loading="lazy"></iframe>
+          <div style="padding: var(--sp-4) var(--sp-5);">
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Voluntários+da+Pátria+2201+Santana+São+Paulo" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Como chegar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo-full.png" alt="Le Manine — pediatria integrada">
+        <p>Cuidado infantil por inteiro, da saúde ao sorriso. Pediatria e odontopediatria integradas para cada fase da infância.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre a Le Manine</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="jornada.html">Como cuidamos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+551140028899">(11) 4002-8899</a></li>
+          <li><a href="https://wa.me/5511940028899" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:ola@lemanine.com.br">ola@lemanine.com.br</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Localização</h4>
+        <ul>
+          <li>Rua Voluntários da Pátria, 2201</li>
+          <li>Santana, São Paulo - SP</li>
+          <li>CEP 02010-200</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Le Manine Pediatria Integrada. Todos os direitos reservados.</span>
+      <span>Feito com cuidado para a infância.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
