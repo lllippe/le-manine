@@ -607,7 +607,9 @@ section.tight{ padding-block: var(--sp-8); }
   color: var(--color-secondary);
   margin: 0;
 }
-.pro-bio{ font-size: var(--fs-sm); color: var(--color-text-muted); flex: 1; }
+.pro-bio{ font-size: var(--fs-sm); color: var(--color-text-muted); flex: 0 0 auto; margin: 0; }
+.pro-bio:last-of-type{ flex: 1; }
+.pro-bio + .pro-bio{ margin-top: calc(var(--sp-2) - var(--sp-3)); }
 .pro-registro{ display: flex; flex-wrap: wrap; gap: var(--sp-2); }
 .chip-registro{
   background: var(--color-accent-light);
