@@ -509,9 +509,125 @@ section.tight{ padding-block: var(--sp-8); }
 .address-grid dt{ font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .05em; color: var(--color-text-soft); font-weight: 700; margin-bottom: 2px; }
 .address-grid dd{ font-size: var(--fs-base); font-weight: 600; color: var(--color-primary-dark); }
 
+/* ---------- Busca e filtro de especialistas ---------- */
+.pro-search-bar{
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--sp-7);
+}
+.pro-search-field{
+  flex: 1 1 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pro-search-field svg{
+  position: absolute; left: var(--sp-4);
+  width: 18px; height: 18px;
+  stroke: var(--color-text-soft);
+  pointer-events: none;
+}
+.pro-search-field input{
+  width: 100%;
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) 2.75rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  font-size: var(--fs-base);
+}
+.pro-search-field input:focus{
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px hsl(var(--brown-600) / 0.12);
+}
+.pro-filter select{
+  flex: 1 1 220px;
+  padding: var(--sp-4);
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+.pro-filter select:focus{ outline: none; border-color: var(--color-primary); }
+.pro-search-count{
+  align-self: center;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding-inline: var(--sp-2);
+}
+.pro-empty{
+  display: none;
+  text-align: center;
+  padding: var(--sp-8) var(--sp-5);
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+}
+.pro-empty.show{ display: block; }
+
+/* ---------- Grade de especialistas ---------- */
+.pro-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+.pro-card{
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.pro-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.pro-card.is-hidden{ display: none; }
+.pro-photo{
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+.pro-photo img{ width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.pro-body{ padding: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-3); flex: 1; }
+.pro-name{ font-size: var(--fs-lg); margin: 0; }
+.pro-specialty{
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin: 0;
+}
+.pro-bio{ font-size: var(--fs-sm); color: var(--color-text-muted); flex: 1; }
+.pro-registro{ display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.chip-registro{
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+.pro-site{
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.pro-site:hover{ color: var(--color-primary-dark); }
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 1024px){
   :root{ --fs-5xl: 3.4rem; --fs-4xl: 2.8rem; --fs-3xl: 2.35rem; }
+  .pro-grid{ grid-template-columns: repeat(2, 1fr); }
   .footer-grid{ grid-template-columns: 1fr 1fr; }
   .grid-4{ grid-template-columns: repeat(2, 1fr); }
   .timeline{ grid-template-columns: repeat(2, 1fr); }
@@ -535,6 +651,9 @@ section.tight{ padding-block: var(--sp-8); }
   .split{ grid-template-columns: 1fr; }
   .split.reverse .split-media{ order: 0; }
   .grid-2, .grid-3{ grid-template-columns: 1fr; }
+  .pro-grid{ grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+  .pro-search-bar{ flex-direction: column; }
+  .pro-search-count{ text-align: center; }
   .address-grid{ grid-template-columns: 1fr 1fr; }
   .form-row{ grid-template-columns: 1fr; }
   .footer-grid{ grid-template-columns: 1fr 1fr; }

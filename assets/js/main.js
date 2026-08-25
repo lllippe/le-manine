@@ -62,6 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* Busca e filtro de especialistas */
+  const proSearch = document.querySelector('#pro-search');
+  const proFilter = document.querySelector('#pro-filter');
+  const proCards = document.querySelectorAll('.pro-card');
+  const proEmpty = document.querySelector('#pro-empty');
+  const proCount = document.querySelector('#pro-count');
+
+  function filterPros() {
+    const term = (proSearch?.value || '').trim().toLowerCase();
+    const area = proFilter?.value || 'todos';
+    let visible = 0;
+
+    proCards.forEach((card) => {
+      const matchesTerm = !term || card.dataset.search.includes(term);
+      const matchesArea = area === 'todos' || card.dataset.area === area;
+      const show = matchesTerm && matchesArea;
+      card.classList.toggle('is-hidden', !show);
+      if (show) visible += 1;
+    });
+
+    if (proEmpty) proEmpty.classList.toggle('show', visible === 0);
+    if (proCount) {
+      proCount.textContent = visible === 1 ? '1 profissional' : `${visible} profissionais`;
+    }
+  }
+
+  if (proCards.length && (proSearch || proFilter)) {
+    proSearch?.addEventListener('input', filterPros);
+    proFilter?.addEventListener('change', filterPros);
+    filterPros();
+  }
+
   /* Ano corrente no rodapé */
   document.querySelectorAll('[data-year]').forEach((el) => {
     el.textContent = new Date().getFullYear();
