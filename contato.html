@@ -43,91 +43,27 @@
     <div class="container">
       <p class="eyebrow">Fale com a gente</p>
       <h1>Vamos cuidar da sua família por inteiro</h1>
-      <p>Preencha o formulário abaixo ou fale direto pelo WhatsApp. Retornamos com carinho e agilidade.</p>
+      <p>Fale direto pelo WhatsApp ou confira nosso endereço, horário de atendimento e outros canais abaixo. Retornamos com carinho e agilidade.</p>
     </div>
   </section>
 
   <section id="agendar">
     <div class="container split">
 
-      <div class="reveal">
-        <p class="eyebrow">Agendamento</p>
-        <h2>Solicite sua consulta</h2>
-        <p class="lead">Conte um pouco sobre a sua família. Em breve alguém da equipe Le Manine entra em contato para confirmar o melhor horário.</p>
-
-        <form id="form-agendamento" class="flow" style="margin-top: var(--sp-6);" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="nome">Nome do responsável</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-              <span class="field-error">Por favor, informe seu nome.</span>
-            </div>
-            <div class="field">
-              <label for="telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" data-mask="phone" required>
-              <span class="field-error">Por favor, informe um telefone.</span>
-            </div>
+      <div class="reveal flow">
+        <div class="card" style="padding:0; overflow:hidden;">
+          <div style="padding: var(--sp-6) var(--sp-6) var(--sp-5);">
+            <p class="eyebrow">Endereço</p>
+            <p class="lead" style="margin:0;">Rua Doutor César, 1368, Sala 1501, Santana, São Paulo, SP, CEP 02013-004</p>
           </div>
-
-          <div class="form-row">
-            <div class="field">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="voce@email.com" required>
-              <span class="field-error">Informe um e-mail válido.</span>
-            </div>
-            <div class="field">
-              <label for="especialidade">Especialidade desejada</label>
-              <select id="especialidade" name="especialidade" required>
-                <option value="">Selecione</option>
-                <option value="pediatria">Pediatria</option>
-                <option value="odontopediatria">Odontopediatria</option>
-                <option value="ambas">Pediatria e odontopediatria</option>
-              </select>
-              <span class="field-error">Selecione uma especialidade.</span>
-            </div>
+          <iframe title="Mapa da região da Le Manine em Santana, São Paulo" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.635%2C-23.505%2C-46.605%2C-23.485&layer=mapnik" style="width:100%; height:280px; border:0; background:var(--color-bg-alt);" loading="lazy"></iframe>
+          <div style="padding: var(--sp-4) var(--sp-5);">
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+César+1368+Santana+São+Paulo" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Como chegar</a>
           </div>
-
-          <div class="form-row">
-            <div class="field">
-              <label for="crianca">Nome da criança</label>
-              <input type="text" id="crianca" name="crianca" placeholder="Nome da criança">
-            </div>
-            <div class="field">
-              <label for="idade">Idade da criança</label>
-              <input type="text" id="idade" name="idade" placeholder="Ex.: 2 anos e 4 meses">
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o que você procura"></textarea>
-          </div>
-
-          <p class="form-note">Ao enviar, você concorda em ser contatado pela equipe Le Manine para confirmar o agendamento. Dados fictícios de demonstração.</p>
-
-          <button type="submit" class="btn btn-primary btn-block">Enviar solicitação de agendamento</button>
-        </form>
-
-        <div id="form-sucesso" class="form-success">
-          <span>&#10003;</span>
-          <span>Solicitação enviada! Em breve nossa equipe entra em contato para confirmar sua consulta.</span>
         </div>
       </div>
 
       <div class="reveal flow">
-        <div class="card">
-          <p class="eyebrow">Endereço</p>
-          <dl class="address-grid">
-            <div><dt>CEP</dt><dd data-mask-display="cep">02013-004</dd></div>
-            <div><dt>Logradouro</dt><dd>Rua Doutor César</dd></div>
-            <div><dt>Número</dt><dd>1368</dd></div>
-            <div><dt>Complemento</dt><dd>Sala 1501</dd></div>
-            <div><dt>Bairro</dt><dd>Santana</dd></div>
-            <div><dt>Cidade</dt><dd>São Paulo</dd></div>
-            <div><dt>UF</dt><dd>SP</dd></div>
-          </dl>
-        </div>
-
         <div class="card">
           <p class="eyebrow">Horário de atendimento</p>
           <p style="display:flex; justify-content:space-between; max-width:320px;"><span>Segunda a sexta</span><strong>8h às 18h</strong></p>
@@ -144,12 +80,7 @@
           </div>
         </div>
 
-        <div class="card" style="padding:0; overflow:hidden;">
-          <iframe title="Mapa da região da Le Manine em Santana, São Paulo" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.635%2C-23.505%2C-46.605%2C-23.485&layer=mapnik" style="width:100%; height:260px; border:0; background:var(--color-bg-alt);" loading="lazy"></iframe>
-          <div style="padding: var(--sp-4) var(--sp-5);">
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+César+1368+Santana+São+Paulo" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Como chegar</a>
-          </div>
-        </div>
+        <a href="https://wa.me/551122833303?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Le%20Manine." class="btn btn-primary btn-block" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
       </div>
 
     </div>
