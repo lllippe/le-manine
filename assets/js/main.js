@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     proCards.forEach((card) => {
       const matchesTerm = !term || normalizeSearch(card.dataset.search).includes(term);
-      const matchesArea = area === 'todos' || card.dataset.area === area;
+      const matchesArea = area === 'todos' || card.dataset.area.split(' ').includes(area);
       const show = matchesTerm && matchesArea;
       card.classList.toggle('is-hidden', !show);
       if (show) visible += 1;
