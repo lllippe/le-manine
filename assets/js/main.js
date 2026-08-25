@@ -69,13 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const proEmpty = document.querySelector('#pro-empty');
   const proCount = document.querySelector('#pro-count');
 
+  function normalizeSearch(str) {
+    return str
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .trim()
+      .toLowerCase();
+  }
+
   function filterPros() {
-    const term = (proSearch?.value || '').trim().toLowerCase();
+    const term = normalizeSearch(proSearch?.value || '');
     const area = proFilter?.value || 'todos';
     let visible = 0;
 
     proCards.forEach((card) => {
-      const matchesTerm = !term || card.dataset.search.includes(term);
+      const matchesTerm = !term || normalizeSearch(card.dataset.search).includes(term);
       const matchesArea = area === 'todos' || card.dataset.area === area;
       const show = matchesTerm && matchesArea;
       card.classList.toggle('is-hidden', !show);
